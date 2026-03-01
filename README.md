@@ -121,6 +121,19 @@ python pca_orbital_analysis.py -p '../data/dz2_dn/*.vasp' --box 4.0 4.0 6.0
 - `pca_projection_2d.png` — 2-D PC1 vs PC2 projection
 - `pca_results/` — CHGCAR-format mean density and principal components (viewable in VESTA)
 
+## Data availability
+
+Large data files (WAVECAR, DOSCAR, exported probability densities `*.vasp`, etc.) are excluded from this repository due to GitHub size limits. The complete dataset is archived on Zenodo:
+
+> **[TODO: replace with actual link after upload]**
+> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+
+After downloading, extract the archive into the repository root so that the `data/` directory is populated:
+
+```bash
+unzip curvature-driven-catalysis-data.zip -d data/
+```
+
 ## Citation
 
 If you use this code, please cite:
