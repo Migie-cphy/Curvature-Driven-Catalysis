@@ -125,8 +125,7 @@ python pca_orbital_analysis.py -p '../data/dz2_dn/*.vasp' --box 4.0 4.0 6.0
 
 Large data files (WAVECAR, DOSCAR, exported probability densities `*.vasp`, etc.) are excluded from this repository due to GitHub size limits. The complete dataset is archived on Zenodo:
 
-> **[TODO: replace with actual link after upload]**
-> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18823122.svg)](https://doi.org/10.5281/zenodo.18823122)
 
 After downloading, extract the archive into the repository root so that the `data/` directory is populated:
 
