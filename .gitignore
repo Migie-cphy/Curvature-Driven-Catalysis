@@ -1,0 +1,25 @@
+# VASP large output files
+WAVECAR
+DOSCAR
+EIGENVAL
+PCDAT
+PROCAR
+XDATCAR
+POTCAR
+vasprun.xml
+REPORT
+CHG
+CHGCAR
+
+# Exported probability density (large volumetric data)
+data/dz2_dn/*.vasp
+data/dz2_dn/sliced_lobes_check/
+data/dz2_dn/pca_results/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store

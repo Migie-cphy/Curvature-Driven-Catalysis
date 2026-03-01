@@ -1,0 +1,49 @@
+SYSTEM =  FeN4-SAC relaxation
+ISTART =  0            (Read existing wavefunction; if there)
+ICHARG =  2            (Non-self-consistent: GGA/LDA band structures)
+LREAL  =  Auto         (Projection operators: automatic)
+ENCUT  =  500          (Cut-off energy for plane wave basis set, in eV)
+PREC   =  Normal       (Precision level)
+LWAVE  = .FALSE.       (Write WAVECAR or not)
+LCHARG = .FALSE.       (Write CHGCAR or not)
+
+# Parallel Calculation
+NCORE  =  32
+KPAR   =  1
+
+# Ionic Relaxation
+ISIF   =  2            (Stress/relaxation: 2-Ions, 3-Shape/Ions/V, 4-Shape/Ions)
+IBRION =  1
+POTIM  =  0.1
+NSW    =  30
+EDIFFG =  -0.02
+
+# Electronic Relaxation
+ISMEAR =  0            (Gaussian smearing; metals:1)
+SIGMA  =  0.2          (Smearing value in eV; metals:0.2)
+NELM   =  60           (Max electronic SCF steps)
+EDIFF  =  1E-05        (SCF energy convergence; in eV)
+
+# Magnetism
+ISPIN  =  2            (Spin polarised DFT)
+
+# VDW
+IVDW   =  12
+
+# RPBE
+GGA = RP
+
+# DFT+U (Dudarev)
+LDAU     = .TRUE.
+LDAUTYPE = 2
+LDAUU    = 0  2  0  0   # C Fe H N (match POSCAR order)
+LDAUJ    = 0  0  0  0
+LDAUL    = -1 2 -1 -1   # U on Fe d-orbitals only
+
+# Implicit solvation (VASPsol)
+LSOL = .TRUE.
+ISOL = 2
+C_MOLAR = 1.0
+R_ION = 4.0
+EFERMI_ref = -3.64
+capacitance_init = 0.5

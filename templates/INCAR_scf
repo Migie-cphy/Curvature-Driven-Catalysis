@@ -1,0 +1,48 @@
+SYSTEM =  FeN4-SAC static SCF (wavefunction export)
+ISTART =  1            (Read existing wavefunction)
+ICHARG =  1            (Read charge density from CHGCAR)
+LREAL  =  Auto         (Projection operators: automatic)
+ENCUT  =  500          (Cut-off energy for plane wave basis set, in eV)
+PREC   =  Normal       (Precision level)
+LWAVE  = .TRUE.        (Write WAVECAR for orbital export)
+LCHARG = .TRUE.        (Write CHGCAR)
+
+# Parallel Calculation
+NCORE  =  32
+KPAR   =  1
+
+# No ionic relaxation
+NSW    =  0
+
+# Electronic Relaxation
+ISMEAR =  0            (Gaussian smearing; metals:1)
+SIGMA  =  0.2          (Smearing value in eV; metals:0.2)
+NELM   =  60           (Max electronic SCF steps)
+EDIFF  =  1E-05        (SCF energy convergence; in eV)
+
+# Magnetism
+ISPIN  =  2            (Spin polarised DFT)
+
+# PDOS output (for VASPKIT)
+LORBIT =  11           (Projected DOS and band character)
+
+# VDW
+IVDW   =  12
+
+# RPBE
+GGA = RP
+
+# DFT+U (Dudarev)
+LDAU     = .TRUE.
+LDAUTYPE = 2
+LDAUU    = 0  2  0  0   # C Fe H N (match POSCAR order)
+LDAUJ    = 0  0  0  0
+LDAUL    = -1 2 -1 -1   # U on Fe d-orbitals only
+
+# Implicit solvation (VASPsol)
+LSOL = .TRUE.
+ISOL = 2
+C_MOLAR = 1.0
+R_ION = 4.0
+EFERMI_ref = -3.64
+capacitance_init = 0.5

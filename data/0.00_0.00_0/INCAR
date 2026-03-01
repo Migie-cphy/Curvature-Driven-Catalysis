@@ -1,0 +1,38 @@
+ISTART =  0            (Read existing wavefunction; if there)
+ICHARG =  2            (Non-self-consistent: GGA/LDA band structures)
+LREAL  =  Auto         (Projection operators: automatic)
+ENCUT  =  500          (Cut-off energy for plane wave basis set, in eV)
+PREC   =  Normal       (Precision level)
+LWAVE  = .TRUE.       (Write WAVECAR or not)
+LCHARG = .TRUE.        (Write CHGCAR or not)
+
+# DOS
+LORBIT = 11
+NEDOS  = 2001
+
+# Parallel Calculation
+NCORE  =  32
+KPAR   =  1
+
+# Electronic Relaxation
+ISMEAR =  0           (Gaussian smearing; metals:1)
+SIGMA  =  0.03
+NELM   =  200           (Max electronic SCF steps)
+NELMIN =  8            (Min electronic SCF steps)
+EDIFF  =  1E-08        (SCF energy convergence; in eV)
+
+# Magnetism
+ISPIN  =  2            (Spin polarised DFT)
+MAGMOM = 36*0  1*6  16*0   4*0.1
+
+# VDW
+IVDW   =  12
+
+# RPBE
+GGA = RP
+
+LDAU     = .TRUE.
+LDAUTYPE = 2              # Dudarev 简化形式
+LDAUU    = 0  2  0  0 # 对应 POSCAR 顺序：C Fe H N O
+LDAUJ    = 0  0  0  0  # J 保持 0 eV（只用 Ueff = U-J）
+LDAUL    = -1 2 -1 -1  # 只对 Fe d 轨道加 U（-1=无U）
