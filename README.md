@@ -130,7 +130,7 @@ Large data files (WAVECAR, DOSCAR, exported probability densities `*.vasp`, etc.
 After downloading, extract the archive into the repository root so that the `data/` directory is populated:
 
 ```bash
-unzip curvature-driven-catalysis-data.zip -d data/
+unzip data.zip
 ```
 
 ## Citation
