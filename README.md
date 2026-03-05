@@ -1,6 +1,6 @@
 # Curvature-Driven-Catalysis
 
-Official implementation of the paper **"A Geometric-Electronic Principle for Curvature-Driven Single-Atom Catalysis"**.
+Official implementation of the paper **"A Geometric-Electronic Principle for Curvature-Driven Catalysis"**.
 
 This repository provides the complete model-generation and post-processing workflow used in the study, including curvature-controlled surface construction, automated orbital identification, wavefunction analysis, and the orbital centroid (⟨z⟩) calculation.
 
