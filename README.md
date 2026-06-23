@@ -1,6 +1,6 @@
 # Curvature-Driven-Catalysis
 
-Official implementation of the paper **"A Geometric-Electronic Principle for Curvature-Driven Catalysis"**.
+Official implementation of the paper **"A Geometric-Electronic Principle for Curvature-Driven Single-Atom Catalysis"**, published in *ACS Catalysis* (2026). DOI: [10.1021/acscatal.6c02847](https://doi.org/10.1021/acscatal.6c02847).
 
 This repository provides the complete model-generation and post-processing workflow used in the study, including curvature-controlled surface construction, automated orbital identification, wavefunction analysis, and the orbital centroid (⟨z⟩) calculation.
 
@@ -137,7 +137,19 @@ unzip data.zip
 
 If you use this code, please cite:
 
-> *A Geometric-Electronic Principle for Curvature-Driven Single-Atom Catalysis*
+> Wang, M.; Lin, Y.; Huang, Z.; Sun, Y.; Wu, S.; Cao, X. A Geometric-Electronic Principle for Curvature-Driven Single-Atom Catalysis. *ACS Catalysis* **2026**. DOI: [10.1021/acscatal.6c02847](https://doi.org/10.1021/acscatal.6c02847)
+
+BibTeX:
+
+```bibtex
+@article{wangGeometricElectronicPrincipleCurvatureDriven2026,
+  title   = {A Geometric-Electronic Principle for Curvature-Driven Single-Atom Catalysis},
+  author  = {Wang, Meijie and Lin, Yuxing and Huang, Zhulin and Sun, Yang and Wu, Shunqing and Cao, Xinrui},
+  year    = {2026},
+  journal = {ACS Catalysis},
+  doi     = {10.1021/acscatal.6c02847}
+}
+```
 
 ## License
 
